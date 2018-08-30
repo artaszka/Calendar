@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Kalendarz.master.cs" Inherits="Kalendarz.MasterPage.Kalendarz" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+        <style type="text/css">
+        .auto-style4 {
+            width: 60px;
+            height: 31px;
+        }
+        .auto-style5 {
+            width: 620px;
+            height: 31px;
+        }
+        .auto-style6 {
+            width: 40px;
+            height: 31px;
+        }
+            
+            }
+    </style>
+</head>
+
+<body style="background-color: #343434">
+    
+    <form id="form1" runat="server">
+    <div style="position:absolute;">
+    <table style="width:800px;">
+        <tr>
+            <td style=" border-style: double none none double; border-color: #3399FF; border-width: 5px 0px 0px 5px; background-color: #bad4ee;" class="auto-style4">
+                <b><%= DateTime.Now %></b>
+            </td>
+            <td style=" border-style: double double double none; border-color: #3399FF; background-color: #bad4ee; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px;" class="auto-style5" >
+                
+
+            </td>
+            <td class="auto-style6"></td>
+        </tr>
+        <tr>
+            <td style="border-style: none double none double; border-width: 0px 5px 0px 5px; 
+                        border-color: #3399FF; background-color: #bad4ee;
+                        vertical-align:top">
+                
+                <asp:Button ID="bShow" runat="server" text="Przeglądanie" 
+                    CausesValidation="false" Width="99px" OnClick="bShow_Click" /><br />
+                <asp:Button ID="bEdit" runat="server" text="Edycja" 
+                    CausesValidation="false" Width="99px" OnClick="bEdit_Click" /><br />
+                <asp:Button ID="bManager" runat="server" text="Zarządzanie" 
+                    CausesValidation="false" Width="99px" OnClick="bManager_Click" /><br /><br /><br />
+                <asp:Button ID="bBack" runat="server" Text="Logowanie " 
+                    OnClick="bBack_Click" CausesValidation="False" Width="99px"/><br />
+                <asp:Button ID="bRegister" runat="server" Text="Rejestracja " 
+                    CausesValidation="False" Width="99px" OnClick="bRegister_Click"/><br />
+                <asp:Button ID="bLogout" runat="server" Text="Wylogowanie " 
+                    CausesValidation="False" Width="99px" OnClick="bLogout_Click"/><br />
+            </td>
+            <td rowspan="2" style="width:200px; border-bottom:dashed">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="border-width: 0px 5px 5px 5px; border-style: none double double double; border-color: #3399FF; background-color:#bad4ee;"><br /><br /></td>
+            
+                
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td style="text-align:right">
+                &copy;Copyright. All rights reserved</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+    
+        
+    </div>
+    </form>
+</body>
+</html>
